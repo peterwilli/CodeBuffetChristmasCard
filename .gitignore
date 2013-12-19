@@ -1,0 +1,5 @@
+_public/
+node_modules/
+vendor/
+*.html
+.idea/
