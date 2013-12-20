@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": [],
   "dependencies": {
-    "console-polyfill": "*"
+    "console-polyfill": "*",
+    "jquery": "~2.0.3"
   }
 }

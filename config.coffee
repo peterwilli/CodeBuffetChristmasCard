@@ -10,11 +10,11 @@ exports.config =
   files:
     javascripts:
       joinTo:
-        'js/app.js': /^app/
-        'js/vendor.js': /^vendor/
+        'js/app.js': /^(app|vendor)/
+
       order:
-        before: [
-          'vendor/console-polyfill/index.js'
+        after: [
+          'app/scripts/main.coffee'
         ]
 
     stylesheets:
