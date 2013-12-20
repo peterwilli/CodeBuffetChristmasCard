@@ -13,6 +13,9 @@ exports.config =
         'js/app.js': /^(app|vendor)/
 
       order:
+        before: [
+          'vendor/jquery/jquery.js'
+        ]
         after: [
           'app/scripts/main.coffee'
         ]

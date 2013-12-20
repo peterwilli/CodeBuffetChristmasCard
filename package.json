@@ -17,7 +17,8 @@
     "static-jade-brunch": ">= 1.0 < 1.7",
     "bower-stylesheet-brunch": "*",
     "bower-asserts-brunch": "*",
-    "javascript-brunch": "~1.7.1"
+    "javascript-brunch": "~1.7.1",
+    "css-brunch": "~1.7.0"
   },
   "devDependencies": {},
   "scripts": {

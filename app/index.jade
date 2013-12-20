@@ -1,13 +1,33 @@
 !!! 5
 html
     head
+        title Merry Christmas from CodeBuffet!
         link(rel='stylesheet', href='css/app.css')
     body
+
         .container
-            .buffet
 
-                .plate
-                    img(src="images/plate.png")
+            .layer.intro-menu
 
-                    .top
-                        img(src="images/top.png")
+                .message
+                    .message-inner
+                        section.notepad
+                            .notepad-heading
+                                h1 Merry Christmas from CodeBuffet!
+                            blockquote
+                                | Make a nice message here
+
+                    .button.play Play the Card!
+
+            .layer.animation-1.blurf
+
+                .buffet
+                    .plate
+                        img(src="images/plate.png")
+
+                        .top
+                            img(src="images/top.png")
+
+        //-.line(style="background:#fff; width:6px; position:absolute; bottom:0; left:50%; margin-left:-3px; top:0; z-index:999;")
+
+    script(src="js/app.js")
