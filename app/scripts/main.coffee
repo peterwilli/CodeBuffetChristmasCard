@@ -6,7 +6,12 @@ startAnimation = ->
   $top = $ ".top"
 
   $play.animateCSS("hinge", ->
-    $top.animateCSS("hinge")
+    $top.transit(
+      rotate: "-45deg"
+      x: "-30%"
+      y: "-90%"
+      duration: 5000
+    )
   )
 
 $play = $(".play")
