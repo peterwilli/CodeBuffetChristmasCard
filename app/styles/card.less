@@ -39,12 +39,31 @@ body, html {
     width:(100%);
   }
 
-  .top {
+  .withinPercentAddition() {
+    width: (100%-@platePercentAddition);
+    left:@platePercentAddition/2;
+  }
+
+  .tree {
+
+    overflow:hidden;
+
+    img {
+      width: 100%;
+    }
+
+    position: absolute;
+    bottom:63%;
+    background:#000;
+    .withinPercentAddition();
+
+  }
+
+  .buffet-top {
     position: absolute;
     z-index: 1;
     bottom:50%;
-    width: (100%-@platePercentAddition);
-    left:@platePercentAddition/2;
+    .withinPercentAddition();
   }
 
   img {

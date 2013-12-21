@@ -15,6 +15,7 @@ exports.config =
       order:
         before: [
           'vendor/jquery/jquery.js'
+          'app/scripts/modernizr-latest.js'
         ]
         after: [
           'app/scripts/main.coffee'
