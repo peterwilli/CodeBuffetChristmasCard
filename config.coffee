@@ -14,7 +14,7 @@ exports.config =
 
       order:
         before: [
-          'vendor/jquery/jquery.js'
+          'app/scripts/jquery-2.0.3.min.js'
           'app/scripts/modernizr-latest.js'
         ]
         after: [
