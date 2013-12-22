@@ -1,3 +1,5 @@
+@import url("lesshat.less");
+
 body {
   margin: 0;
   padding: 0;
@@ -39,29 +41,61 @@ body, html {
     width:(100%);
   }
 
-  .withinPercentAddition() {
-    width: (100%-@platePercentAddition);
-    left:@platePercentAddition/2;
+  .withinPercentAddition(@percent:0%) {
+
+    @platePercentAddition_:(@platePercentAddition + @percent);
+
+    width:(100%-@platePercentAddition_);
+    left:@platePercentAddition_/2;
   }
 
-  .tree-parts {
+  .tree-parts-container
+  {
+    position: absolute;
+    .withinPercentAddition(20%);
+    z-index:0;
 
-    overflow:hidden;
+    -webkit-transform-style: flat;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
 
-    img {
-      width: 100%;
-      position: absolute;
+    bottom:60%;
+
+    .tree-wrap {
+      width:100%;
+      position:absolute;
+      bottom:0%;
     }
 
-    position: absolute;
-    bottom:15%;
-    .withinPercentAddition();
+    .tree-image.folded.even {
+      .transform(perspective(500px) rotateX(70deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, -50%, 0px));
+    }
+
+    .tree-image.folded.uneven {
+      .transform(perspective(500px) rotateX(-100deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, -50%, 0px));
+    }
+
+    .tree-image.unfold.even,.tree-image.unfold.uneven {
+      .transform(perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, -50%, 0px));
+      -webkit-transition: all 5s ease;
+      -moz-transition: all 5s ease;
+      -o-transition: all 5s ease;
+      -ms-transition: all 5s ease;
+      transition: all 5s ease;
+
+    }
+
+    .tree-image {
+
+      position:absolute;
+
+    }
 
   }
 
   .buffet-top {
     position: absolute;
-    z-index: 1;
+    z-index: 5;
     bottom:50%;
     .withinPercentAddition();
   }
