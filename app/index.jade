@@ -4,18 +4,25 @@ html
         title Merry Christmas from CodeBuffet!
         link(rel='stylesheet', href='css/app.css')
         meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0')
+        | <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
     body
-
         .container
-
-            .perspective
-                .tile.out
-                    button(onclick='openMyCard();') Open
-                .tile.in-top
-                    p.
-                .tile.in-bottom
-
-
-            //-.line(style="background:#fff; width:6px; position:absolute; bottom:0; left:50%; margin-left:-3px; top:0; z-index:999;")
+            .card-wrapper
+                .perspective
+                    .tile.out
+                        div.open-button(onclick='openMyCard();')
+                            |Click Me&nbsp;
+                            i.fa.fa-play-circle
+                    .tile.in-top(align="center", style="display:none")
+                        br
+                        br
+                        p The hard work today will be tomorrow's celebration
+                        p The dreams we have today we will be tomorrow's reality
+                        p The things we believe in today will be proven tomorrow
+                        p To end up with the forest you want you first have to plant the trees.
+                        p That's what we all done this year.
+                    .tile.in-bottom
+                        img.card(src="images/card.svg", height="768")
 
     script(src="js/app.js")
